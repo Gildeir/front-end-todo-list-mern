@@ -1,7 +1,5 @@
 import './App.css';
 import TodoForm from './components/TodoForm';
-import { useState } from 'react'
-
 
 function App() {
   return (
