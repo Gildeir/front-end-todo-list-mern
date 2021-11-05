@@ -13,13 +13,13 @@ function TodoForm() {
   useEffect(() => {
   getTodos()
   
-},[])
+  },[])
 
-const getTodos = async () => {
-  const data = await axios.get(link);
-  setTodos(data.data.todo)
-  console.log(todos)
-  console.log(data)
+  const getTodos = async () => {
+    const data = await axios.get(link);
+    setTodos(data.data.todo)
+    console.log(todos)
+    console.log(data)
   }
 
   const renderTodos = () => {
@@ -29,11 +29,30 @@ const getTodos = async () => {
 }
 
 
+
+
+  const insertTodos = () => {
     return (
-      <div>
-      { renderTodos() }
+      <div className="Texet-editor">
+        <form>
+          <div className="input-control">
+            <label htmlFor="name">Name</label>
+            <input type="text" id="name" placeholder="Enter the name"></input>
+          </div>
+          <div className="input-control">
+            <label htmlFor="comment">Comment</label>
+            <textarea name="" id="comment" cols="30" rows="5"></textarea>
+          </div>
+          <button className="submit-btn">Add Item</button>
+        </form>
       </div>
-    )
+    )}
+  return (
+    <div>
+        {insertTodos()}
+        { renderTodos() } 
+    </div>
+  )
 }
 
-export default TodoForm
+export default TodoForm;
