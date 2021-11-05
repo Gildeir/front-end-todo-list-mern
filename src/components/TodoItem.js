@@ -1,12 +1,75 @@
 import React from 'react'
+import styled from 'styled-components';
+import document from '../img/document.png';
+import edit from '../img/edit.png';
+import deleteIcon from '../img/deleteIcon.png';
 
 function TodoItem({ todoFromForm }) {
   return (
-    <div>
-      <h3>{ todoFromForm.name}</h3>
-      <p>{ todoFromForm.comment}</p>
-    </div>
+    < TodoItemStyled >
+      <div class="icon-document">
+        <img src={document} alt="document icon"></img>
+      </div>
+      <div class="text-con">
+       <div className="left-text">
+         <h3>Task name</h3>
+         <p>{ todoFromForm.name}</p>
+       </div>
+       <div className="rigth-text">
+         <h3>Comment</h3>
+         <p>{ todoFromForm.comment}</p>
+       </div>
+      </div>
+      <div class="edit">
+        <img src={ edit } alt="edit icon"></img>
+      </div>
+      <div class="delete">
+        <img src={ deleteIcon } alt="document icon"></img>
+      </div>
+    </TodoItemStyled>
   )
-
 }
+
+const TodoItemStyled = styled.div`
+  display: flex;
+  background-color: #4F6877;
+  padding: 1rem;
+  margin: .8rem 0;
+  width: 100%;
+  border-radius: 30px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+  
+  h3 {
+    color: #6bbe92;
+    margin-bottom: 10px;
+  }
+  p {
+    margin-bottom: 10px;
+    color: white;
+    
+  }
+  .icon-document, .edit, .delete , img{
+    height: 30px;
+    margin-bottom: 10px;
+  } 
+  .text-con {
+    flex: 3;
+    display: grid;
+    grid-template-columns: inherit(2, 1fr);
+    .right-text {
+      flex: 3;
+      background-color: white;
+    }
+  }
+
+  .edit{
+    margin-left: 100px;
+    
+    
+  }
+
+  .icon-document {
+    margin-right: 15px;
+  }
+`;
 export default TodoItem;

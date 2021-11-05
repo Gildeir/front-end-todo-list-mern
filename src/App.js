@@ -14,10 +14,10 @@ function App() {
 }
 
 const AppStyled = styled.div`
-align-items: center;
-display: flex;
-justify-content: center;
-min-height: 100vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
 
  .content-container {
     align-items: center;
@@ -27,17 +27,24 @@ min-height: 100vh;
     display: flex;
     justify-content: center;
     min-height: 80vh;
-    width: 80%;
-    form {
-      input, textarea {
+    overflow-y: scroll;
+    /* width: 80%; */
+    form{ input, textarea {
+        background-color: #4F6877;
         border: none;
-        border-radius: 20px;
-        font-family: 'Poppins', sans-serif;
+        border-radius: 15px;
+        filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.25));
         font-size: inherit;
         padding: .7rem 1rem;
-        outline: none;
-        width: 100%;
-      }
+        justify-content: center;
+        margin-left: 15px;
+        margin: .5rem 0;
+        width: 90%;
+        ::-webkit-input-placeholder{
+          color:white;
+          opacity: 60%;
+        }
+    }
     }
   }
 `;
