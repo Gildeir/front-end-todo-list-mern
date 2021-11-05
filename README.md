@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+Boas vindas ao repositório do projeto Ebytr
+Contexto
+A empresa Ebytr está passando por problemas de produtividade/controle porque as pessoas colaboradoras vêm tendo dificuldade na organização de suas tarefas individuais. Por esse motivo, a diretora de produto Carolina Bigonha decidiu implantar uma nova forma de organizar as tarefas. Você foi a pessoa contratada para desenvolver um sistema capaz de auxiliar as pessoas colaboradoras a se organizar e ter mais produtividade. Na Ebytr o time de desenvolvimento utiliza a Stack MERN para criar suas aplicações. Foi combinado com a Ebytr que você utilizará essa mesma Stack para resolver o problema de organização e produtividade da empresa.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Instalação do projeto localmente
+Abra o terminal e crie um diretório no local de sua preferência com o comando mkdir:
 
-## Available Scripts
+mkdir projetos-gildeir
 
-In the project directory, you can run:
+Entre no diretório que acabou de criar e depois clone o projeto:
 
-### `npm start`
+cd projetos-gildeir git clone git@github.com:Gildeir/front-end-todo-list-mern.git.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Acesse o diretório do projeto e depois utilize o comando npm i para instalar todas as dependências necessárias:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+cd front-end-todo-list-mern npm i
 
-### `npm test`
+Por último, rode o comando npm start e acesse o projeto via browser, no caminho http://localhost:3000/todo.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Funcionalidades do projeto
+1) Visualizar a lista de tarefas (implementado);
+2) Lista ordenável por ordem alfabética, data de criação ou por status (parcialmente implemendato, a lista é criada automaticamente por ordem de criação);
+3) Inserir uma nova tarefa na lista (implementado);
+4) Remover uma tarefa da lista (implementado);
+5) Atualizar uma tarefa da lista (implementado);
+6) A tarefa deve possuir um status editável: pendente, em andamento ou pronto (parcialmente implementado, a lista possui um campo aberto para descrição do status);
