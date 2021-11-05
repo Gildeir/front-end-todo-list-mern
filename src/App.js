@@ -20,16 +20,20 @@ const AppStyled = styled.div`
   min-height: 100vh;
 
  .content-container {
-    align-items: center;
+    /* align-items: center; */
+    align-items: flex-start;
     background-color: #374954;
     border-radius: 20px;
     box-shadow: 10px 12px 20px rgba(0, 0, 0, .2);
     display: flex;
     justify-content: center;
-    min-height: 80vh;
+    height: 80vh;
     overflow-y: scroll;
-    /* width: 80%; */
-    form{ input, textarea {
+    width: 80%;
+    form, input {
+      margin-top: 40px;
+    }
+    form input, textarea {
         background-color: #4F6877;
         border: none;
         border-radius: 15px;
@@ -38,7 +42,7 @@ const AppStyled = styled.div`
         padding: .7rem 1rem;
         justify-content: center;
         margin-left: 15px;
-        margin: .5rem 0;
+        margin: .5rem ;
         width: 90%;
         ::-webkit-input-placeholder{
           color:white;
@@ -47,5 +51,6 @@ const AppStyled = styled.div`
     }
     }
   }
-`;
+`
+
 export default App;

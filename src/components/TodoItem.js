@@ -69,8 +69,6 @@ const TodoItemStyled = styled.div`
 
   .edit{
     margin-left: 100px;
-    
-    
   }
 
   .icon-document {

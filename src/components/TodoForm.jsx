@@ -43,7 +43,12 @@ function TodoForm() {
   }
 
   const renderTodos = () => {
-    return todos.map((todo, index) => {
+    let sortedTodos = [...todos];
+     sortedTodos = sortedTodos.sort((a, b) =>{
+      return new Date(b.createdAt) - new Date(a.createdAt)
+    })
+    
+    return sortedTodos.map((todo, index) => {
       return <TodoItem key={index} todoFromForm={todo} getTodos={getTodos}/>
   })
 };
