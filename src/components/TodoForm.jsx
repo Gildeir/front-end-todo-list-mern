@@ -83,7 +83,7 @@ function TodoForm() {
               onChange={(e)=> setTodoName(e.target.value)}
               required
               autoComplete="off"  type="text" id="name"
-              placeholder="Enter the name"></input>
+              placeholder="Task name"></input>
           </div>
           <div className="input-control">
             <label htmlFor="comment"></label>
@@ -92,7 +92,7 @@ function TodoForm() {
               value={ todoComment }
               onChange={(e)=> setTodoComment(e.target.value)}
               name="" id="comment" cols="30" rows="5" 
-              placeholder="Task name"></textarea>
+              placeholder="Entre com status: pendente, em andamento ou pronto"></textarea>
           </div>
           <button className="submit-btn">Add Item</button>
           <button onClick={() => {}}className="a-z">A-Z</button>

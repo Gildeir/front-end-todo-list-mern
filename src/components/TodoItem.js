@@ -19,11 +19,11 @@ function TodoItem({ todoFromForm, getTodos, editTodos }) {
       </div>
       <div className="text-con">
        <div className="left-text">
-         <h3>Task name</h3>
+         <h3>Task</h3>
          <p>{ todoFromForm.name}</p>
        </div>
        <div className="rigth-text">
-         <h3>Comment</h3>
+         <h3>Status</h3>
          <p>{ todoFromForm.comment}</p>
        </div>
       </div>
