@@ -43,13 +43,8 @@ function TodoForm() {
   }
 
   const renderTodos = () => {
-    let sortedTodos = [...todos];
-     sortedTodos = sortedTodos.sort((a, b) =>{
-      return new Date(b.createdAt) - new Date(a.createdAt)
-    })
-    
-    return sortedTodos.map((todo, index) => {
-      return <TodoItem key={index} todoFromForm={todo} getTodos={getTodos}/>
+    return todos.map((todo, index) => {
+      return <TodoItem key={index} todoFromForm={todo} />
   })
 };
   const insertTodos = () => {
@@ -62,9 +57,8 @@ function TodoForm() {
               value={ todoName }
               onChange={(e)=> setTodoName(e.target.value)}
               required
-              autoComplete="off"  type="text" id="name"
-              placeholder="Enter the name">
-            </input>
+              autocomplete="off"  type="text" id="name"
+              placeholder="Enter the name"></input>
           </div>
           <div className="input-control">
             <label htmlFor="comment"></label>
