@@ -22,7 +22,7 @@ const AppStyled = styled.div`
  .content-container {
     /* align-items: center; */
     align-items: flex-start;
-    background-color: #374954;
+  background: linear-gradient(to right, #005aa7, #fffde4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border-radius: 20px;
     box-shadow: 10px 12px 20px rgba(0, 0, 0, .2);
     display: flex;
@@ -30,6 +30,18 @@ const AppStyled = styled.div`
     height: 80vh;
     overflow-y: scroll;
     width: 80%;
+
+    ::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 10px;
+    background-color: #6bbe92;
+  }
+  h3 {
+    font-size: 15px;
+  }
+  p {
+    font-size: 15px;
+  }
     form, input {
       margin-top: 40px;
     }
@@ -38,12 +50,12 @@ const AppStyled = styled.div`
         border: none;
         border-radius: 15px;
         filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.25));
-        font-size: inherit;
+        font-size: 15px;
         padding: .7rem 1rem;
         justify-content: center;
         margin-left: 15px;
         margin: .5rem ;
-        width: 90%;
+        width: 80%;
         ::-webkit-input-placeholder{
           color:white;
           opacity: 60%;

@@ -3,14 +3,21 @@ import styled from 'styled-components';
 import document from '../img/document.png';
 import edit from '../img/edit.png';
 import deleteIcon from '../img/deleteIcon.png';
+import axios from 'axios';
 
-function TodoItem({ todoFromForm }) {
+function TodoItem({ todoFromForm, getTodos, editTodos }) {
+
+
+    const deleteTodo = async () => {
+      await axios.delete(`http://localhost:5000/todo/${todoFromForm._id}`);
+      getTodos();
+    }
   return (
     < TodoItemStyled >
-      <div class="icon-document">
+      <div className="icon-document">
         <img src={document} alt="document icon"></img>
       </div>
-      <div class="text-con">
+      <div className="text-con">
        <div className="left-text">
          <h3>Task name</h3>
          <p>{ todoFromForm.name}</p>
@@ -20,10 +27,10 @@ function TodoItem({ todoFromForm }) {
          <p>{ todoFromForm.comment}</p>
        </div>
       </div>
-      <div class="edit">
-        <img src={ edit } alt="edit icon"></img>
+      <div className="edit">
+        <img src={ edit } alt="edit icon" onClick={()=> editTodos(todoFromForm)}></img>
       </div>
-      <div class="delete">
+      <div className="delete" onClick={deleteTodo}>
         <img src={ deleteIcon } alt="document icon"></img>
       </div>
     </TodoItemStyled>

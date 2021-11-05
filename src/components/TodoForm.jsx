@@ -12,11 +12,19 @@ function TodoForm() {
   const [todos, setTodos] = useState([]);
   const [todoName, setTodoName] = useState('')
   const [todoComment, setTodoComment] = useState('')
+  const [editTodoData, setEditTodoData] = useState(null)
 
   useEffect(() => {
   getTodos()
   
   },[])
+
+  useEffect(() => {
+    if (editTodoData) {
+      setTodoName(editTodoData.name ? editTodoData.name:'')
+      setTodoComment(editTodoData.comment ? editTodoData.comment:'')
+    }
+  },[editTodoData])
 
   const getTodos = async () => {
     const data = await axios.get(link);
@@ -33,18 +41,35 @@ function TodoForm() {
       comment: todoComment ? todoComment : undefined,
     }
     
-    await axios.post(link, todoData)
+    if (!editTodoData) {
+      await axios.post(link, todoData)
+    } else {
+
+      await axios.put(`http://localhost:5000/todo/${editTodoData._id}`, todoData)
+    }
+
     
     setTodoName('');
     setTodoComment('');
-    getTodos()
+    getTodos();
+    setEditTodoData('');
+  }
 
-
+  const editTodos = (todosData) => {
+    setEditTodoData(todosData)
   }
 
   const renderTodos = () => {
-    return todos.map((todo, index) => {
-      return <TodoItem key={index} todoFromForm={todo} />
+  
+
+   let sortedTodos = [...todos];
+ 
+     sortedTodos = sortedTodos.sort((a, b) =>{
+      return new Date(b.createdAt) - new Date(a.createdAt)
+    })
+
+    return sortedTodos.map((todo, index) => {
+      return <TodoItem key={index} todoFromForm={todo} getTodos={getTodos} editTodos={editTodos}/>
   })
 };
   const insertTodos = () => {
@@ -57,7 +82,7 @@ function TodoForm() {
               value={ todoName }
               onChange={(e)=> setTodoName(e.target.value)}
               required
-              autocomplete="off"  type="text" id="name"
+              autoComplete="off"  type="text" id="name"
               placeholder="Enter the name"></input>
           </div>
           <div className="input-control">
@@ -70,6 +95,7 @@ function TodoForm() {
               placeholder="Task name"></textarea>
           </div>
           <button className="submit-btn">Add Item</button>
+          <button onClick={() => {}}className="a-z">A-Z</button>
         </form>
       </div>
     )}
@@ -90,13 +116,15 @@ const TodoFormStyled = styled.div`
   .text-editor{
     width: 60%;
     form {
-      .submit-btn {
+      .a-z {}
+      .submit-btn, .a-z {
         padding: .5rem 1rem;
         cursor: pointer;
         background-color: #6bbe92;
         border: none;
         border-radius: 34px;
         color: white;
+        margin-left: 20px;
         margin-bottom: 20px;
       }
     }
