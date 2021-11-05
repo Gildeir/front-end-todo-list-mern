@@ -9,7 +9,7 @@ mkdir projetos-gildeir
 
 Entre no diretório que acabou de criar e depois clone o projeto:
 
-cd projetos-gildeir git clone git@github.com:Gildeir/front-end-todo-list-mern.git.
+cd projetos-gildeir git clone git@github.com:Gildeir/front-end-todo-list-mern.git
 
 Acesse o diretório do projeto e depois utilize o comando npm i para instalar todas as dependências necessárias:
 
