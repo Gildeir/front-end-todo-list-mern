@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+Boas vindas ao repositório do projeto de front-end-todo-list-mern
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Instalação do projeto localmente
 
-## Available Scripts
+Abra o terminal e crie um diretório no local de sua preferência com o comando mkdir:
+  mkdir projetos-gildeir
+Entre no diretório que acabou de criar e depois clone o projeto:
+  cd projetos-johnatas
+  git clone git@github.com:Gildeir/front-end-todo-list-mern.git
+Acesse o diretório do projeto e depois utilize o comando npm i para instalar todas as dependências necessárias:
+  cd frontend-store
+  npm i
+Por último, rode o comando npm start e acesse o projeto via browser, no caminho http://localhost:3000/todo.
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Funcionalidades do projeto
+1) Visualizar a lista de tarefas (implementado);
+2) Lista ordenável por ordem alfabética, data de criação ou por status (parcialmente implemendata, a lista é criada automaticamente por ordem de criação);
+Inserir uma nova tarefa na lista (implementado);
+Remover uma tarefa da lista (implementado);
+Atualizar uma tarefa da lista (implementado);
+A tarefa deve possuir um status editável: pendente, em andamento ou pronto (parcialmente implementado, a lista possui um campo aberto para descrição do status);
