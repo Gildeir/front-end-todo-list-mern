@@ -26,7 +26,7 @@ Por último, rode o comando npm start e acesse o projeto via browser, no caminho
 
 ## Funcionalidades do projeto
 ### 1) Visualizar a lista de tarefas (implementado);
-### 2) Lista ordenável por ordem alfabética, data de criação ou por status (parcialmente implemendata, a lista é criada automaticamente por ordem de criação);
+### 2) Lista ordenável por ordem alfabética, data de criação ou por status (parcialmente implemendato, a lista é criada automaticamente por ordem de criação);
 ### 3) Inserir uma nova tarefa na lista (implementado);
 ### 4) Remover uma tarefa da lista (implementado);
 ### 5) Atualizar uma tarefa da lista (implementado);
