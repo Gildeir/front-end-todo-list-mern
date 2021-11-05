@@ -44,7 +44,7 @@ function TodoForm() {
 
   const renderTodos = () => {
     return todos.map((todo, index) => {
-      return <TodoItem key={index} todoFromForm={todo} />
+      return <TodoItem key={index} todoFromForm={todo} getTodos={getTodos}/>
   })
 };
   const insertTodos = () => {
@@ -57,8 +57,9 @@ function TodoForm() {
               value={ todoName }
               onChange={(e)=> setTodoName(e.target.value)}
               required
-              autocomplete="off"  type="text" id="name"
-              placeholder="Enter the name"></input>
+              autoComplete="off"  type="text" id="name"
+              placeholder="Enter the name">
+            </input>
           </div>
           <div className="input-control">
             <label htmlFor="comment"></label>
